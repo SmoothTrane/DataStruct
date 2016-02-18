@@ -4,7 +4,8 @@ public static void main(String[] args){
 	
 	
 List array = new ArrayList();
-array.add(5);
+int[] arr = {8,9,10,3,4};
+System.out.println(array.delete(arr, 10));
 	}
 
 
