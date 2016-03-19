@@ -15,6 +15,15 @@ public ArrayList(int val){
 	// O(1) 
 
 	}
+	public void add(int n, int index){
+		size++;
+		
+		for(int i = size; i> index; i--){
+			arr[i] = arr[i-1];
+		}
+		
+		arr[index]=n;
+	}
 	
 	public boolean update(int currentN, int replaceN){
 	
@@ -30,6 +39,7 @@ while(arr[i]!=currentN){
 arr[i]= replaceN;
 
 return true;
+
 
 }
 		
