@@ -2,7 +2,9 @@
 public class ArrayList implements List{
 private int[] arr;
 private int size;
+private int capacity;
 public ArrayList(int val){
+	capacity = val;
 	arr = new int[val];
 	size = 0;
 	//USER MUST SPECIFY a CAPACITY on the array in order to add elements 
@@ -10,6 +12,9 @@ public ArrayList(int val){
 
 	
 	public void add(int n){
+		if(size>=capacity){
+			throw new ArrayIndexOutOfBoundsException();
+		}
 	arr[size] = n;
 	size++;
 	// O(1) 
