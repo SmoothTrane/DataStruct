@@ -84,6 +84,20 @@ return true;
 	}
 	
 	//implement indexOf method
-	
-	//implement shift method
+	public int indexOf(int n){
+		for (int i = 0; i < arr.length; i++) {
+
+			if (arr[i] == location) {
+				return i;           
+			}
+
+		}
+		return -1;
+	}
+	public void shiftRight(){
+	// implement		
+	}
+	public void shiftLeft(){
+		//implement 
+	}
 }
