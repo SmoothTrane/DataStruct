@@ -20,26 +20,17 @@ public ArrayList(int val){
 	// O(1) 
 
 	}
-	public void add(int n, int index){
-		size++;
-		
-		for(int i = size; i> index; i--){
-			arr[i] = arr[i-1];
-		}
-		
-		arr[index]=n;
-	}
 	
 	public boolean update(int currentN, int replaceN){
 	
-int i=0;
-while(arr[i]!=currentN){
-	i++;
-	if(i>=size){
+	int i=0;
+	while(arr[i]!=currentN){
+		i++;
+		if(i>=size){
 		return false;
 	}
 
-}
+	}
 
 arr[i]= replaceN;
 
@@ -91,4 +82,8 @@ return true;
 	public int size(){
 		return size;
 	}
+	
+	//implement indexOf method
+	
+	//implement shift method
 }
