@@ -7,7 +7,6 @@ public ArrayList(int val){
 	capacity = val;
 	arr = new int[val];
 	size = 0;
-	//USER MUST SPECIFY a CAPACITY on the array in order to add elements 
 }
 
 	
@@ -65,18 +64,22 @@ return true;
 	
 	
 	public boolean delete(int n){
-		int[] arr = {1,2,3,4};
-	int[] newArr = new int[arr.length-1];
-		for(int i = 0; i<arr.length; i++){
-			if(arr[i] != n){
-				newArr[i] = arr[i];
+		for(int i=0; i<size; i++){
+			if(arr[i] == n){
+				if(i + 1 >= size){
+					size--;
+					return true;
+				}
+				else{
+					size--;
+					for(int k =i; k<size; k++){
+						arr[k] = arr[k+1];
+					}
+					return true;
+				}
 			}
-			
 		}
-		
-	return true;
-
-		
+		return false;
 	}
 	
 	public int size(){
@@ -87,17 +90,12 @@ return true;
 	public int indexOf(int n){
 		for (int i = 0; i < arr.length; i++) {
 
-			if (arr[i] == location) {
+			if (arr[i] == n) {
 				return i;           
 			}
 
 		}
 		return -1;
 	}
-	public void shiftRight(){
-	// implement		
-	}
-	public void shiftLeft(){
-		//implement 
-	}
+	
 }
